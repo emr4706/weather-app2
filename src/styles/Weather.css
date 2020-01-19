@@ -1,0 +1,123 @@
+.weather-container {
+    background: #3949ab;
+    box-shadow: 2px 4px 16px 0 rgba(0, 0, 0, 0,5);
+    height: 670px;
+    width: 80%;
+    border-radius: 5px;
+    position: relative;
+    padding: 10px;
+}
+
+.weather-header h3 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.weather-header div {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    width: 80%;
+    margin: auto;
+}
+.search-input {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    outline: none;
+    width: 100%;
+    font-size: 1.2rem;
+}
+.weather-header button {
+    border: none;
+    color: #17A589;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+}
+/* ::-webkit-input-placeholder */  
+.search-input {
+    font-size: 1.1rem;
+    color: #eee;
+    opacity: 0.5;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-top: 120px;
+}
+.weather-info i {
+    color: yellow;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    animation: rotate 5s infinite linear;
+}
+/* animation */
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: #EC7063;
+    font-size: 1.3rem;
+}
+
+.header-description {
+    text-align: center;
+}
+
+.weather-info h3 {
+    margin-bottom: 0;
+}
+
+.degree-symbol::before {
+    content: "\00b0";
+}
+
+@media screen and (min-with: 700px) {
+   .weather-container {
+       height: 350px;
+   } 
+   .weather-header {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       margin-top: 25px;
+   }
+   .weather-header h3 {
+       margin: 0;
+
+   }
+   .weather-header div {
+       width: 50%;
+       margin: 0;
+   }
+   .weather-info {
+       height: 100px;
+       margin-top: 65px;
+   }
+   .weather-data-flex {
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+       width: 100%;
+   }
+}
+
+@media screen and (min-width:1100px) {
+    .weather-container {
+        width: 60%;
+    }
+}
